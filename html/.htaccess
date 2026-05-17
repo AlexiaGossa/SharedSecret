@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Ne jamais réécrire /assets ni son contenu
+RewriteRule ^assets(/.*)?$ - [L]
+
+# Rediriger la racine vers index.php
+RewriteRule ^$ index.php [L]
+
+# Rediriger tout le reste vers index.php
+RewriteRule ^.*$ index.php [L]
+
