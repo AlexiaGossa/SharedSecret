@@ -1,0 +1,48 @@
+.user_area {
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 1em;
+	padding-bottom: 4em;
+    margin: 0;
+    background-color: #EEE;
+}
+
+#secret_text {
+	width: 100%;
+	padding: 1em;
+	min-height: 16em;
+}
+
+#remove_secret {
+	display: none;
+}
+
+.warning-message {
+	background-color: #FFD0D0;
+    padding: 2em;
+    margin: 2em;
+    border-radius: 1em;
+}
+
+.bottom-show-button {
+	width: 100%;
+	margin: 0;
+	padding: 2em;	
+	text-align: center;
+}
+
+.header {
+    width: 100%;
+    background-color: #198754;
+    padding: 1em;
+    margin: 0;
+    color: #FFF;
+}
+.footer {
+    width: 100%;
+    background-color: #AC1E44;
+    padding: 1em;
+    margin: 0;
+    color: #FFF;
+}
