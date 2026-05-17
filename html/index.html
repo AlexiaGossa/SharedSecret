@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Shared secret website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+		
+        <meta http-equiv="expires" content="1" />
+        <meta http-equiv="pragma" content="no-cache">
+
+        <link href="./assets/bootstrap.min.css" rel="stylesheet">
+		<link href="./assets/main.css" rel="stylesheet">
+		<link href="./assets/ubuntu.css" rel="stylesheet">
+		<link href="./assets/raleway.css" rel="stylesheet">
+		
+        <script src="./assets/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="./assets/bootstrap.bundle.min.js" type="text/javascript"></script>
+        <script src="./assets/main.js" type="text/javascript"></script>
+    </head>
+	
+	<body>
+	
+		<div class="user_area" id="secret_create">
+			<textarea placeholder="Saisir votre texte ici avant de partager le lien" id="secret_text"></textarea>
+			
+			<div id="block-expire">
+				Expiration du texte secret
+
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio-1read" autocomplete="off" expire="1read" checked>
+					<label class="btn btn-outline-primary" for="btnradio-1read">A la 1ère lecture</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio-24h" autocomplete="off" expire="24h" >
+					<label class="btn btn-outline-primary" for="btnradio-24h">Après 24h</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio-7d" autocomplete="off" expire="7d">
+					<label class="btn btn-outline-primary" for="btnradio-7d">Après 7 jours</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio-30d" autocomplete="off" expire="30d">
+					<label class="btn btn-outline-primary" for="btnradio-30d">Après 30 jours</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio-ondemand" autocomplete="off" expire="ondemand">
+					<label class="btn btn-outline-primary" for="btnradio-ondemand">A la demande</label>
+
+					<input type="radio" class="btn-check" name="btnradio" id="btnradio-never" autocomplete="off" expire="never">
+					<label class="btn btn-outline-primary" for="btnradio-never">Jamais</label>
+
+				</div>
+			</div>
+			
+			<div id="block-secret_password">
+				Mot de passe additionnel pour lire le secret <i>(optionnel)</i>
+			
+				<div class="input-group mb-3">
+					<span class="input-group-text">Mot de passe additionnel</span>
+					<input type="text" class="form-control" id="secret_password">
+				</div>		
+			</div>
+			
+		
+			<div id="block-remove_secret">
+				Mot de passe de suppression du secret
+			
+				<div class="input-group mb-3">
+					<span class="input-group-text">Mot de passe additionnel</span>
+					<input type="text" class="form-control" id="remove_secret_password">
+				</div>		
+			</div>
+			
+			<div>
+				<button type="button" class="btn btn-lg btn-block btn-success" onclick="GenerateLink();">Chiffrer et générer le lien</button>
+			</div>
+			
+		</div>
+		
+		<div class="user_area" id="secret_done" style="display:none;">
+			<h2>Votre URL sécurisée</h2>
+			<div>
+				<a href="" id="secret_url"></a>
+				<button title="Copy URL" class="copy"></button> 
+			</div>
+			
+			<hr>
+			
+			<div>
+				<h2>Vous souhaitez partager un nouveau secret ?</h2>
+				<button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='/';">Partager un nouveau secret</button>
+			</div>
+		</div>
+	</body>
+</html>
