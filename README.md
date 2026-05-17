@@ -15,6 +15,7 @@ Sécurité
 - Bloquer les accès abusifs par brute-force via un challenge côté client
 - Voir pour utiliser Argon2id ou PBKDF2
 - Déplacer le dossier /html/secrets directement dans /secrets
+- Ajouter une protection contre le XSS sur les données et remontées par JS
 
 Autres points
 - Résoudre les différents problèmes de CSP, notamment l'injection de Javascript "inline".
