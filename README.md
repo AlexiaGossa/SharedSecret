@@ -16,6 +16,7 @@ Sécurité
 - Voir pour utiliser Argon2id ou PBKDF2
 - Déplacer le dossier /html/secrets directement dans /secrets
 - Ajouter une protection contre le XSS sur les données et remontées par JS
+- Faire une configuration Apache HTTPD propre et sécurisée
 
 Autres points
 - Résoudre les différents problèmes de CSP, notamment l'injection de Javascript "inline".
